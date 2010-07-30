@@ -1,4 +1,5 @@
 \documentclass{report}
+\usepackage{makeidx}
 \usepackage{pstricks}
 \usepackage{pspicture}
 \usepackage{rotating}
@@ -1789,7 +1790,7 @@ circ = `s^: <
             ('L51',7.088897e+00)^: <>,
             ('R52',2.879279e+00)^: <>>>>>
 \end{SaveVerbatim}
-\scaleboxto(0,572){\BUseVerbatim{VerbEnv}}
+\psscaleboxto(0,572){\BUseVerbatim{VerbEnv}}
 \caption{concrete representation of the circuit in Figure~\ref{rlcc}}
 \label{crlc}
 \end{Listing}
@@ -9857,7 +9858,7 @@ X  transform top two types type to a pair
 i  transform top type to random instance generator
 w  swap the top two operands on the stack
 \end{SaveVerbatim}
-\scaleboxto(0,572){\BUseVerbatim{VerbEnv}}
+\psscaleboxto(0,572){\BUseVerbatim{VerbEnv}}
 \caption{output from \texttt{\$ fun --help types}}
 \label{fht}
 \end{Listing}
@@ -20755,7 +20756,7 @@ $ fun lat lax --m="paths x" --c %sLG
 \end{SaveVerbatim}
 \mbox{}\\%$
 \noindent
-\scaleboxto(\textwidth,0){\BUseVerbatim{VerbEnv}}\\[1em]
+\psscaleboxto(\textwidth,0){\BUseVerbatim{VerbEnv}}\\[1em]
 \noindent
 As this example suggests, some pruning may be required in practice to
 limit the inevitable combinatorial explosion inherent in computing all

@@ -1,0 +1,11 @@
+*.aux
+*.dvi
+*.idx
+*.toc
+pics/*.aux
+*.pdf
+*.ilg
+*.ind
+*.ps
+*~
+*.log

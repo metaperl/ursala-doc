@@ -1,0 +1,63 @@
+#!/usr/bin/perl
+
+# 0 means don't include as dependencies, 1 means include only if it exists,
+# 2 means always include.  Note that .bbl and .ind also trigger
+# bibtex or mkindex processing
+%handling=(
+   '.bbl'=>0,
+   '.cfg'=>1,
+   '.clo'=>1,
+   '.cls'=>1,
+   '.def'=>1,
+   '.fd'=>1,
+   '.ind'=>0,
+   '.out'=>0,
+   '.pdf'=>2,
+   '.sty'=>1,
+   '.tex'=>1,
+);
+
+$outstem=shift;
+
+@prereqs=("$outstem.tex");
+$flag=0;
+$hasbib=0;
+$hasind=0;
+
+while (<>) {
+   $flag=0 if /\*\*\*\*\*\*\*\*\*\*\*/;
+
+   if ($flag) {
+      next unless /^\s*([^ .]+)(\.\S+)?\s*/;
+      if (($handling{$2}==2) || ($handling{$2}==1 && -r $1.$2)) {
+         push(@prereqs,$1.$2);
+      }
+      if ($2 eq '.bbl') {
+         $hasbib=1;
+      }
+      if ($2 eq '.ind') {
+         $hasind=1;
+      }
+   }
+
+   $flag=1 if /\*File List\*/;
+}
+
+if ($hasbib) {
+   open(AUX,"$outstem.aux");
+   @bibdata=();
+   while (<AUX>) {
+      @bibdata=split(/,/,$1) if /^\\bibdata\{(.*)\}/;
+   }
+}
+
+print "$outstem.p1: ".join(' ',@prereqs)."\n\n";
+if ($hasbib || $hasind) {
+   print "$outstem.pdf: $outstem.p2\n\n";
+   print "$outstem.p2:".($hasbib?" $outstem.bbl":'')
+        .($hasind?" $outstem.ind":'')."\n\n";
+   print "$outstem.ind: $outstem.p1 $outstem.bbl\n\n" if $hasbib && $hasind;
+   print "$outstem.bbl: ".join('.bib ',@bibdata).".bib\n\n" if $hasbib && @bibdata;
+} else {
+   print "$outstem.pdf: $outstem.p1\n\n";
+}
