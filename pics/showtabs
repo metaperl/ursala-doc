@@ -1,0 +1,7 @@
+#!/bin/sh
+# This program reads a text file from standard input and
+# writes it to standard output with all tab characters replaced by the
+# string '<tab>'.
+#\
+exec avram  "$0"  "$@"
+uIzMOt[QV]uGmzlSgcr>=d\nT\

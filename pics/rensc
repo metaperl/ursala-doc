@@ -1,0 +1,12 @@
+MAXCOUNT=30
+x=$MAXCOUNT
+while [[ $x -gt 0 ]]
+do
+   echo $x
+   fun flo fit plo ren rend.fun
+   cp surface surface$x
+   latex newrendemo
+   dvips newrendemo
+   cp newrendemo.ps newrendemo$x.ps
+   x=$(( $x-1 ))
+done

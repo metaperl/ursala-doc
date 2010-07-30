@@ -1,0 +1,80 @@
+# Thses functions use a restricted form of RLC circuits to
+# demonstrate complex arithmetic and recursion. The circuit is
+# represented as a tree with `s or `p as non-terminal nodes, and pairs
+# of strings and reals as terminal nodes. The strings begin with R, L or
+# C, and the real is its resistance, inductance, or capacitance.
+#
+# impedance takes an argument of the form (w,t) where w is an angular
+# frequency and t is a tree of type %cseXD representing a circuit. The
+# result is a tree of type %cjXsjXD, where each node contains the
+# (complex) impedance of its subtree.
+#
+# current_division takes a complex input current and a real angular
+# frequency to a function that takes a circuit tree as above to a list
+# of assignments of the form <component-name: (current,voltage)..>,
+# where component-name is a string and current and voltage are complex.
+#
+# current_division                           (15829)
+# impedance                                  (15094)
+# phaser                                       (426)
+#
+# compressed with granularity 84
+#
+{iwKwEI{hwZkjhwziXbrhx{og?^XrpiIxnHz_esjrwzHf{wv_fUGxxiypBcux{Z{oQK=k_FfzxdatCk
+O=KyaFiAv`CqQiymvcucFNpsO@aZIqqhRKIYvjneD[\WJdNeGGFqaq?Pcs`kkIglHi=X@@_PvyMo<wm
+MM{SQLSZYYXA<EyNlND@=w>yrlcw<gQhNI[MqFMPYPmeT?y[L=kIQKIL{yg?Nw_HV?ZJBcFc{Hn{X{H
+[{{Kf@SoTn]VKrNLDSjOSPzQrrmz[{yNHpGpOxaPA>z^u[Dn^wsOyN{\]zE{Qc{\bpyOKMK>a{x_CwW
+QBO<iGIITOL[hAvQL[csIPtiKQSYMz[k=LWnaSqFqOsaOD@[_attF[t[Fo?EqJGL{?D[<[opA{=P=fo
+IMs{GbEctB[q\=yz[LPhoDnW?]o<S]zwdd[pdKbOjwKmXQl<Al@SsRC{{sLQ<^oHn_wBTLSywL`SgPg
+Ds?qvxnoTBcfSqD=@[c{{CiDN>F]LvFb[\=IfuzfmoVvzPeOv?QSTbZKzw^S^[Cuxt[QLRd`<?AlUlM
+=[Q<ZeK=SPnKRurq\`<m{yI<F[dCd[D[{_nfiL\a^NB[fed>H[{tymNHQWK^McwQ]eD[\c<SLO{{wqA
+NIu?<Mzq<oQs[sxDyJ\iOPnDHSkaPi=XTU^gcuy{gkIOP<eJCxppmStxskMTHER?\zP=cwqu\<c\F^g
+d[BZ[cuMZqNh@=]yQAYcYwPmXq?GzNrKNdmzaiONM<JglA\m>S^[=_vfqF?ApgO]ZrsIxdIRpsIMqWu
+<BCmZkRG\VjU]f[dAdtxqIp>OQLy=pHi=ywRwZUNZcjmkN?Auzj]DLBk^f@]zUoBnfl>oFvJIWV[mTR
+JE[NmJofqYEBvdE<QqMh\V{<?LS<\nWNggpdoqk=ts=kP{aHj\aVfgtB=BxpcOmb<T=D>Z<_OQA<OP?
+OpBHrSh?n\NvURUDG?ypMkJukX[DH`PyQOINghKyCCSYoPAXuIQPoOz@Wmt@p][zMg\hq?EOB]qaw?q
+lKtOG`gPVAMgi[UByqNNz[cndL?QPQHoIOpevjj@wTYP>biQ_wyYPMkZVeerEZ]t=Nfg<g{>eGyy^wL
+Fdv\fgPxcP[[LDMj`cSO]Pe{LOQIL=vYpvyH@_azdWhhgAIS@yMuytMkQuC?J]D[^oQI@LKl@beGSxg
+E{fWHQGBxADjYMuzMjZLZ<SGLS?NdGDzy?JeLK=vdvhFXQQMmUF{ZjWMnMkPs<Ad>Z_QSdfy@@^Hf>W
+WCfeQN`yek{mvkrg``W{[tre@IQ=DPOuND{DedE^qPAW@oL[coag{xZ{fMkHpxLYLkQQ<T{ml\>F[Dq
+N]J\nEZ]{x[L[co`d{{@Wq[aXTtLqPy>yT`F\>NievPe{LO{w`pEZ]{uN[coeByPyzWtxQQK\KQx^_Q
+BcX=D[^gcuyzPf[p@{zlEZ=vtMkk_hMsk[AiQSYJFy<HFUUbi=XFj]xUw{v=D[^gcuxNcubg`WxYwlh
+yrQ{tqFfhP?EkP<<zZ<>Zvk<R?@j[clpAlfvCnC]D[\Zg`Wjhm?MJ[{QcCuysQQCwHo^c{ce@=fubBg
+d[DZ<cjglAp@pAl=fuBwlxeuBAZ{fSREZ]u_PqUclD_Ecuy{zjBg^fVk<SLNM<VjU^\EtVjMjHKXqUF
+aQwy`Bve{LRKXnAPJ?H^Sb[{cux@=ft<BgbTftVjF^`LVjMjm{uSQM^_zzvFPNNCtkbaPnnH>FctHMz
+[>S\Z=ftVjF^@=ft>jBg`Wo[ZG?xvJYw{KwyHdpAl{uGGHvt@]zBEZ]vcubBg]gl>=ft@=fuByx{qqE
+JyKZx{kktz{Gxqr<cezSFIRWmgLSDe{LMD[\TVjBl\Vj=fuByGOsxw{zFxNFWgaw{Kww{Kwwhzon?vM
+<az[GPnLdd>Z@]zFpAl=ft[]ftVjMk?BisQygS\XpjvY_XggZz{_wzkqwxkkn{klivqcsNvcvHZ@iLT
+E@pAl\EtVj=TBg]fuBvK^Qo@CcGYN<Txk@lJWvtg{KwwxiyozSjg{ZvGZzoKin{FgXn<Dyd@@]z<[mP
+dj<cfM=ft\VjBg`Wl@jiRp[T{miHhp?@I\BkWwzKkv{sj`ivoXsG[[qwxiy{FsgZjGZgFzw_FoH=i<p
+AlCGN<L`LjBg\VjBg`W`]`w{V[xRYQZa<P@A_g_g[Z{g[Z{aw{KyzxixjhfoNsgZtiywgGXio_fsFiq
+hfsJjGXyUGGKnD<cuQFG]<VxBg]fmB{Pc\W{sQY[NOjOf>\<bkhNso[Z{@ixssipsskqZ{OxxwfsAjg
+rjJgXfsWHivssxxhhhwGRgEVhgNJgHohfnhdsGEllEAvgLL=hTVxBfMkddAs^{=aBqmXvPaHhjMGqin
+spixssjsG[FsoXgIG[IwweIywgZwhWGrgFzmWorvwfnJgINKGYNsGXtjxvxyVNhvvogh{HvyHrogfpB
+jj<F{{]P={=hDV`W]KOqIHCgXUv]aUF]PXcW_cKXiuXiwGZiy{KVimVioGIgafsfivskwG[IyzO[[qi
+VWOrjWQFzmhkhWOkKJxt{JxhonoNohwGjtjw_cohohvhwC]QhohZwPGJnw\BIN@Cuxt\@>CtVMjoYBi
+[jrrgYASuEgQE]=jAMHjxinwns?nsPinsJOGrgHynnSKKWgjgXJgYFsGXuXiqGYIohipsJJTyqehjwq
+dxWQiVwQiVWGjuhjw\UWOkJOkJkKRaWWGwJnzlC=bYHpbYFp]\aWfr]WPKVidi^=_<aucg\<R=`WykI
+Ih=esQCl`BgpIQHqAJJtKeIJvh`pwnoJxh_nnnoinOOrjOGsJkWbnzmIJxhokGDvhfhwOsGIXhphoQn
+nnoH?L=duqehkhKTKR_jJUR_bKYVWOwQehkhEPjnwjwOjuJw_rJyRrqWQgiR\>ACHzAchxLJAWiT<J?
+Qrqjt\FctHNjD=B{`PfOZ\FQCCj?p{rF<eN><JtB[ehjv{eHkXuHkXvwo_oqD[vWGj{eIKWpnxqNwQK
+eHkXuHkXvwg_gqiIKXuKXwX{DkXwX{dD<B?cRbqN<X<Jt=\B_`=T=\yqgiR_aRjqV?uPrnzmPrpzoiK
+h<R<T?jqdw<wiVJtDUtX<Bc]\LtQ_dD?_PIIUBNCtZg]BthzzlGWXY]Gnlp=Kn`hDw]\SQeiJw]avOO
+r{eHkWbpwjjw_tTAyNWGw=cwOOoCgIvKANK=cnOOr{eHkWbpwjjw_`ZhnyjoOruKW]wHkW^yjAtLB?c
+P_l<=T<<T<\B?pQDy\TuaVJLJ?uRjqVKQWWQIPjqN<D=\Jl=\C<w\A<]\<<T<>K<><?\\r>pAn=fuBy
+D`ceqF?rKp?RXHXCIPDw\=_cRbnzlTUzppxlQzpnxqWOOwRnzlJ@=l{PbqNA=bZhsDQcdS<tz?]\[oO
+Oo=[wOGoQiiKiWGw<tYCiHkHZppxoIKHBcIHkHoGo<P<=Lz=\<<<Tz<PDB?h=\\tKUR_p?\uiNK<zqD
+z@<T\<B^^<<<<<<>Z=fuB{uLhh[dKltVg?Taw@dtw^A\uqeiP^C=bZhsdrAunoZ_`ZjqVQgiRd\<K?y
+NK^A]rZ]ltATB^?f<]\XZhsDB]ZZhsduaVwQeRjqV<=]jZhsdYsiIwZhsd<[XpsivoZ^DB><I>^<T\<
+=\y<B>?TK\tK<z?TD<<`LVxMj=daGdCFJB_{BjcYYL<LwdDR?cP_n<B]rZ]`<<TCcdS]TSaVJLuaVJL
+D<J?tI\<A]jB@J>><<]]jZ]t<B=PZ]X?\uaVJLuaVJT<XBuvBLB<YkdW<WkdW]LCkDQ\QKdQ\N><<L=
+^\<J<\<J\>jBl`W\su@<>K]LjnC_uYMGCj<<Q_tJ<<PBtU=TQ\T>=Tu]TS?bA^<ID<<B><<>=\W=l?]
+P=\\tJLJ?lu\t<=TU]\=lCTB=\BlA>B<XJ?\Q_L<D=<<=<[`Wj=rtPFblEAh?kA@=w\<JD^=d<<vF<A
+\D<Ad<^<]<T<Dt<LJ><<v<<B><=d^=^<B>>K<d<R@W]<<DeNVNblkX<aj`D<<<@<<<><<\<L<\\<<<D
+Mka>ezet?x^Zt<D<Mkdnd@fc_]l]W]Bxh^lFAdz>ZuBxO^_PA>lRuBwN>XF=ejMkbSY<GjMjlD{>>w`
+Ww?]lgjMkAd{]IjMjt=Ld<zuBt^\<ruBuLijMjDNW`WlgzMj^Hk`Wl]KuBzD?zMj<>s`W\kuBtDs`W\
+kuBvLs`W\VZMj>k`W^GuBtfzMj?KuBtDIuBtfZMj>k`WfIuBtdc`W^euBtfZMjfc`WAFZMdVc`TNc`I
+GtM>z@gtP{]<s`etVzBEtVZJc]NzHItlc_et`c_EvnZQetMEunZAMw@zLOtHz?KdouAK\Xz=OvQzLAz
+<qtIz>QtIz`QtCc\Bz=k\wtAs\JZ?k\bZ?cduuAk\Mc]utAceMuHz>Othz?StDQtjZ>Wt]c^utIC\ov
+aZFUteC^mthZgKaES]Ec``ZOCbmtOCiOu@OtOK]QZ@Su=S`qtQc]BzLUuJZAMtXzBUtUC]mtxZAOtmS
+_BZHMtxZEMtpZiKaMS]Mca@ZSC@PUp=O@<
